@@ -66,6 +66,9 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 
     git push --set-upstream origin main
 
+- You should now be able to see all the project files you committed on
+  the GitHub repo browser.
+
 ## Installation
 
 You can install the development version of repositoryr from
