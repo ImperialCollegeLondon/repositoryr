@@ -9,6 +9,22 @@
 The goal of repositoryr is to provide a step by step guide to creating a
 R package repository.
 
+## Selecting a package name
+
+To find suggestions on valid package names use
+`available::suggest(text="description of what the package does")`. You
+can also check whether the package name is available using
+`available::available("pkgname")`.
+
+<figure>
+<img src="inst/images/using_available.png"
+alt="USing available package" />
+<figcaption aria-hidden="true">USing available package</figcaption>
+</figure>
+
+Alternatively, you can use
+`pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)`.
+
 ## Installation
 
 You can install the development version of repositoryr from
