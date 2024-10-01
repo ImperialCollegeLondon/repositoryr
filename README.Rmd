@@ -24,11 +24,11 @@ The goal of repositoryr is to provide a step by step guide to creating a R packa
 
 To find suggestions on valid package names use `available::suggest(text="description of what the package does")`. You can also check whether the package name is available using `available::available("pkgname")`.
 
-![Using available package](inst/images/using_available.png)
+![Using available package](inst/images/using_available.png){width=50%}
 
 Alternatively, you can use `pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)`.
 
-![Using pak package](inst/images/using_pak.png)
+![Using pak package](inst/images/using_pak.png){width=50%}
 
 ## Creating a package
 
@@ -57,11 +57,16 @@ More details: [Create and connect a GitHub repo](https://happygitwithr.com/exist
 
 ```
 git remote add origin https://github.com/ImperialCollegeLondon/repositoryr
-
 git push --set-upstream origin main
 ```
 
 - You should now be able to see all the project files you committed on the GitHub repo browser.
+
+
+## Using `devtools`
+
+- Install devtools in RStudio using `install.packages("devtools")`.
+- 
 
 ## Installation
 

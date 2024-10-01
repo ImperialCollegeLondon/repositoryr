@@ -17,7 +17,7 @@ can also check whether the package name is available using
 `available::available("pkgname")`.
 
 <figure>
-<img src="inst/images/using_available.png"
+<img src="inst/images/using_available.png" style="width:50.0%"
 alt="Using available package" />
 <figcaption aria-hidden="true">Using available package</figcaption>
 </figure>
@@ -26,7 +26,8 @@ Alternatively, you can use
 `pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)`.
 
 <figure>
-<img src="inst/images/using_pak.png" alt="Using pak package" />
+<img src="inst/images/using_pak.png" style="width:50.0%"
+alt="Using pak package" />
 <figcaption aria-hidden="true">Using pak package</figcaption>
 </figure>
 
@@ -63,11 +64,15 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 <!-- -->
 
     git remote add origin https://github.com/ImperialCollegeLondon/repositoryr
-
     git push --set-upstream origin main
 
 - You should now be able to see all the project files you committed on
   the GitHub repo browser.
+
+## Using `devtools`
+
+- Install devtools in RStudio using `install.packages("devtools")`.
+- 
 
 ## Installation
 
