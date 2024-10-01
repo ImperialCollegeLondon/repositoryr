@@ -72,7 +72,8 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 ## Using `devtools`
 
 - Install devtools in RStudio using `install.packages("devtools")`.
-- 
+- It is a set of packages that support various aspects of package
+  development (it includes the `usethis` package too).
 
 ## Installation
 
