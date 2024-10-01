@@ -30,6 +30,34 @@ Alternatively, you can use
 <figcaption aria-hidden="true">Using pak package</figcaption>
 </figure>
 
+## Creating a package
+
+- In RStudio go to File -\> New Project -\> New Directory -\> R Package.
+- Write the name of the package and select using renv and initialise
+  git.
+- This will create a minimal package structure.
+
+## Create and connect with a GitHub repository
+
+- Create a new repository on GitHub using the same name as the package.
+- Set the visibility permissions of this repository as suitable but DO
+  NOT initialise this repository with anything.
+- Copy a clone URL of the repository to your clipboard.
+
+More details: [Create and connect a GitHub
+repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-github-repo-without-usethis)
+
+## Connect local repo to GitHub repo
+
+- Click on the “two purple boxes and a white square” in the Git pane.
+- Click “Add remote”.
+- Paste the GitHub repo’s URL here and pick a remote name, say, `origin`
+  and click “Add”.
+- Enter main as the branch name and make sure “Sync branch with remote”
+  is checked and click “Create”.
+
+## Connect local repo to GitHub repo with the command line
+
 ## Installation
 
 You can install the development version of repositoryr from
