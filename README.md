@@ -18,12 +18,17 @@ can also check whether the package name is available using
 
 <figure>
 <img src="inst/images/using_available.png"
-alt="USing available package" />
-<figcaption aria-hidden="true">USing available package</figcaption>
+alt="Using available package" />
+<figcaption aria-hidden="true">Using available package</figcaption>
 </figure>
 
 Alternatively, you can use
 `pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)`.
+
+<figure>
+<img src="inst/images/using_pak.png" alt="Using pak package" />
+<figcaption aria-hidden="true">Using pak package</figcaption>
+</figure>
 
 ## Installation
 

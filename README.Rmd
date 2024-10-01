@@ -24,10 +24,11 @@ The goal of repositoryr is to provide a step by step guide to creating a R packa
 
 To find suggestions on valid package names use `available::suggest(text="description of what the package does")`. You can also check whether the package name is available using `available::available("pkgname")`.
 
-![USing available package](inst/images/using_available.png)
+![Using available package](inst/images/using_available.png)
 
 Alternatively, you can use `pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)`.
 
+![Using pak package](inst/images/using_pak.png)
 
 
 ## Installation
