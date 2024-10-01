@@ -68,6 +68,14 @@ git push --set-upstream origin main
 - Install devtools in RStudio using `install.packages("devtools")`.
 - It is a set of packages that support various aspects of package development (it includes the `usethis` package too).
 
+## Create website for your package
+
+- Run `install.packages("pkgdown").
+- To configure the package to use and deploy pkgdown, run `usethis::use_pkgdown_github_pages()`.
+- To preview your site locally before publishing, run `pkgdown::build_site()`.
+- This will add the necessary components and sets up GitHub Actions for automatic site building when deploying. 
+- Your `README.md` becomes the homepage, documentation in `man/` generates a function reference, and vignettes will be rendered into `articles/`.
+
 ## Installation
 
 You can install the development version of repositoryr from [GitHub](https://github.com/) with:
