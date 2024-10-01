@@ -53,7 +53,13 @@ More details: [Create and connect a GitHub repo](https://happygitwithr.com/exist
 
 ## Connect local repo to GitHub repo with the command line
 
+- In a shell, run the following (substituting with your URL):
 
+```
+git remote add origin https://github.com/ImperialCollegeLondon/repositoryr
+
+git push --set-upstream origin main
+```
 
 ## Installation
 

@@ -58,6 +58,14 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 
 ## Connect local repo to GitHub repo with the command line
 
+- In a shell, run the following (substituting with your URL):
+
+<!-- -->
+
+    git remote add origin https://github.com/ImperialCollegeLondon/repositoryr
+
+    git push --set-upstream origin main
+
 ## Installation
 
 You can install the development version of repositoryr from
