@@ -9,6 +9,17 @@
 The goal of repositoryr is to provide a step by step guide to creating a
 R package repository.
 
+## Requirements
+
+- RStudio installed: You will need R and RStudio both installed. You can
+  do so either by: - Download [RStudio
+  Desktop](https://posit.co/downloads/) OR
+  - Use [Posit Cloud](https://posit.cloud/) (online) OR
+  - Install it via Chocolatey (first install R using
+    `choco install r.project` and then RStudio using
+    `choco install r.studio`) OR
+  - Install it via Homebrew.
+
 ## Selecting a package name
 
 Install the package `available` using `install.packages("available")`.
