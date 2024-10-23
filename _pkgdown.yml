@@ -1,4 +1,12 @@
 url: https://imperialcollegelondon.github.io/repositoryr/
 template:
   bootstrap: 5
-
+  light-switch: true
+navbar:
+  structure:
+    right: [search, github, lightswitch]
+  components:
+    github:
+      icon: fa-github
+      href: https://github.com/ImperialCollegeLondon/repositoryr
+      aria-label: GitHub
