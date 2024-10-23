@@ -22,8 +22,9 @@ R package repository.
 
 ## Selecting a package name
 
-Install the package `available` using `install.packages("available")`.
-To find suggestions on valid package names use
+Install the package `available` in RStudio using
+`install.packages("available")`. To find suggestions on valid package
+names use
 `available::suggest(text="description of what the package does")`. You
 can also check whether the package name is available using
 `available::available("pkgname")`.
