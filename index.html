@@ -53,10 +53,10 @@
 <div class="section level2">
 <h2 id="selecting-a-package-name">Selecting a package name<a class="anchor" aria-label="anchor" href="#selecting-a-package-name"></a>
 </h2>
-<p>To find suggestions on valid package names use <code>available::suggest(text="description of what the package does")</code>. You can also check whether the package name is available using <code>available::available("pkgname")</code>.</p>
+<p>Install the package <code>available</code> using <code>install.packages("available")</code>. To find suggestions on valid package names use <code>available::suggest(text="description of what the package does")</code>. You can also check whether the package name is available using <code>available::available("pkgname")</code>.</p>
 <figure><img src="inst/images/using_available.png" style="width:50.0%" alt="Using available package"><figcaption aria-hidden="true">
 Using available package
-</figcaption></figure><p>Alternatively, you can use <code>pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)</code>.</p>
+</figcaption></figure><p>Alternatively, you can use <code>pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)</code>. (Note: To install <code>pak</code>, use <code>install.packages("pak")</code>).</p>
 <figure><img src="inst/images/using_pak.png" style="width:50.0%" alt="Using pak package"><figcaption aria-hidden="true">
 Using pak package
 </figcaption></figure>
@@ -112,10 +112,19 @@ Using pak package
 </ul>
 </div>
 <div class="section level2">
+<h2 id="using-devtoolscheck">Using <code>devtools::check()</code>
+<a class="anchor" aria-label="anchor" href="#using-devtoolscheck"></a>
+</h2>
+<ul>
+<li>At this stage, you can try <code>devtools::check()</code> to see if there are any issues with the package.</li>
+<li>It should raise an issue about missing/non-standard license in the <code>DESCRIPTION</code> file. It will be fixed soon!</li>
+</ul>
+</div>
+<div class="section level2">
 <h2 id="create-website-for-your-package">Create website for your package<a class="anchor" aria-label="anchor" href="#create-website-for-your-package"></a>
 </h2>
 <ul>
-<li>Run `install.packages(“pkgdown”).</li>
+<li>Run <code>install.packages("pkgdown")</code>.</li>
 <li>To configure the package to use and deploy pkgdown, run <code>usethis::use_pkgdown_github_pages()</code>.</li>
 <li>To preview your site locally before publishing, run <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code>.</li>
 <li>This will add the necessary components and sets up GitHub Actions for automatic site building when deploying.</li>
