@@ -108,6 +108,16 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 - Run `devtools::check()` to verify if everything works (As of now, it
   raises a note “Licence stub is invalid DCF.”)
 
+## Add R files and corresponding unit tests
+
+- Create a R function file using `usethis::use_r("filename")`.
+- A `filename.R` file will be created under the `R/` directory which you
+  can populate.
+- Create a corresponding unit test file using
+  `usethis::use_test("filename")`.
+- A `test-filename.R` file will be created under the `tests/testthat/`
+  directory where you can add the unit tests.
+
 ## Create website for your package
 
 - Run `install.packages("pkgdown")`.
