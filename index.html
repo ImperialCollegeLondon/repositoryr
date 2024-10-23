@@ -5,14 +5,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>What the Package Does (Title Case) • repositoryr</title>
+<title>Guidelines to create an R package • repositoryr</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="What the Package Does (Title Case)">
-<meta name="description" content="More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.">
-<meta property="og:description" content="More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.">
+<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Guidelines to create an R package">
+<meta name="description" content="Provides a step by step guide to creating a R package repository.">
+<meta property="og:description" content="Provides a step by step guide to creating a R package repository.">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -136,6 +136,16 @@ Using pak package
 </ul>
 </div>
 <div class="section level2">
+<h2 id="update-description-file">Update <code>DESCRIPTION</code> file<a class="anchor" aria-label="anchor" href="#update-description-file"></a>
+</h2>
+<ul>
+<li>The <code>DESCRIPTION</code> file contains the metadata of your package. You can add some descriptive text about your package under <code>Title</code> and <code>Description</code> fields. You can also fill in the author and maintainer details.</li>
+<li>Manually add BSD-3-Clause license (recommended) first to your repository and then to the <code>DESCRIPTION</code> file.</li>
+<li>
+</li>
+</ul>
+</div>
+<div class="section level2">
 <h2 id="create-website-for-your-package">Create website for your package<a class="anchor" aria-label="anchor" href="#create-website-for-your-package"></a>
 </h2>
 <ul>
@@ -180,7 +190,8 @@ Using pak package
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li>What license is it under?</li>
+<li>
+<a href="https://opensource.org/licenses/BSD-3-Clause" class="external-link">BSD</a>-3-Clause</li>
 </ul>
 </div>
 
@@ -195,7 +206,7 @@ Using pak package
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>The package maintainer <br><small class="roles"> Maintainer </small>  </li>
+<li>Imperial College London RSE Team <br><small class="roles"> Maintainer </small>  </li>
 </ul>
 </div>
 
@@ -206,7 +217,7 @@ Using pak package
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by The package maintainer.</p>
+  <p>Developed by Imperial College London RSE Team.</p>
 </div>
 
 <div class="pkgdown-footer-right">
