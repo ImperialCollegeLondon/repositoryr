@@ -1,12 +1,14 @@
 Package: repositoryr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Guidelines to create an R package
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: person(given = "Imperial College London RSE Team",
+           family = "",
+           role = c("aut", "ctb"),
+           email = "ict-rse-team@imperial.ac.uk")
+Maintainer: Imperial College London RSE Team <ict-rse-team@imperial.ac.uk>
+Description: Provides a step by step guide to creating a R package repository.
+License: BSD-3-Clause
 Encoding: UTF-8
 LazyData: true
 URL: https://imperialcollegelondon.github.io/repositoryr/
