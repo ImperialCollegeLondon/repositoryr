@@ -12,8 +12,9 @@ R package repository.
 ## Requirements
 
 - RStudio installed: You will need R and RStudio both installed. You can
-  do so either by: - Download [RStudio
-  Desktop](https://posit.co/downloads/) OR
+  do so either by:
+
+  - Download [RStudio Desktop](https://posit.co/downloads/) OR
   - Use [Posit Cloud](https://posit.cloud/) (online) OR
   - Install it via Chocolatey (first install R using
     `choco install r.project` and then RStudio using
