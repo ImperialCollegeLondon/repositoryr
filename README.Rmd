@@ -22,11 +22,11 @@ The goal of repositoryr is to provide a step by step guide to creating a R packa
 
 ## Selecting a package name
 
-To find suggestions on valid package names use `available::suggest(text="description of what the package does")`. You can also check whether the package name is available using `available::available("pkgname")`.
+Install the package `available` using `install.packages("available")`. To find suggestions on valid package names use `available::suggest(text="description of what the package does")`. You can also check whether the package name is available using `available::available("pkgname")`.
 
 ![Using available package](inst/images/using_available.png){width=50%}
 
-Alternatively, you can use `pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)`.
+Alternatively, you can use `pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)`. (Note: To install `pak`, use `install.packages("pak")`).
 
 ![Using pak package](inst/images/using_pak.png){width=50%}
 
@@ -68,9 +68,14 @@ git push --set-upstream origin main
 - Install devtools in RStudio using `install.packages("devtools")`.
 - It is a set of packages that support various aspects of package development (it includes the `usethis` package too).
 
+## Using `devtools::check()`
+
+- At this stage, you can try `devtools::check()` to see if there are any issues with the package.
+- It should raise an issue about missing/non-standard license in the `DESCRIPTION` file. It will be fixed soon!
+
 ## Create website for your package
 
-- Run `install.packages("pkgdown").
+- Run `install.packages("pkgdown")`.
 - To configure the package to use and deploy pkgdown, run `usethis::use_pkgdown_github_pages()`.
 - To preview your site locally before publishing, run `pkgdown::build_site()`.
 - This will add the necessary components and sets up GitHub Actions for automatic site building when deploying. 

@@ -11,6 +11,7 @@ R package repository.
 
 ## Selecting a package name
 
+Install the package `available` using `install.packages("available")`.
 To find suggestions on valid package names use
 `available::suggest(text="description of what the package does")`. You
 can also check whether the package name is available using
@@ -23,7 +24,8 @@ alt="Using available package" />
 </figure>
 
 Alternatively, you can use
-`pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)`.
+`pak::pkg_name_check("healthgpsrvis", dictionaries = NULL)`. (Note: To
+install `pak`, use `install.packages("pak")`).
 
 <figure>
 <img src="inst/images/using_pak.png" style="width:50.0%"
@@ -75,9 +77,16 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 - It is a set of packages that support various aspects of package
   development (it includes the `usethis` package too).
 
+## Using `devtools::check()`
+
+- At this stage, you can try `devtools::check()` to see if there are any
+  issues with the package.
+- It should raise an issue about missing/non-standard license in the
+  `DESCRIPTION` file. It will be fixed soon!
+
 ## Create website for your package
 
-- Run \`install.packages(“pkgdown”).
+- Run `install.packages("pkgdown")`.
 - To configure the package to use and deploy pkgdown, run
   `usethis::use_pkgdown_github_pages()`.
 - To preview your site locally before publishing, run
