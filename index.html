@@ -51,6 +51,19 @@
 <!-- badges: end -->
 <p>The goal of repositoryr is to provide a step by step guide to creating a R package repository.</p>
 <div class="section level2">
+<h2 id="requirements">Requirements<a class="anchor" aria-label="anchor" href="#requirements"></a>
+</h2>
+<ul>
+<li>RStudio installed: You will need R and RStudio both installed. You can do so either by: - Download <a href="https://posit.co/downloads/" class="external-link">RStudio Desktop</a> OR
+<ul>
+<li>Use <a href="https://posit.cloud/" class="external-link">Posit Cloud</a> (online) OR</li>
+<li>Install it via Chocolatey (first install R using <code>choco install r.project</code> and then RStudio using <code>choco install r.studio</code>) OR</li>
+<li>Install it via Homebrew.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section level2">
 <h2 id="selecting-a-package-name">Selecting a package name<a class="anchor" aria-label="anchor" href="#selecting-a-package-name"></a>
 </h2>
 <p>Install the package <code>available</code> using <code>install.packages("available")</code>. To find suggestions on valid package names use <code>available::suggest(text="description of what the package does")</code>. You can also check whether the package name is available using <code>available::available("pkgname")</code>.</p>
