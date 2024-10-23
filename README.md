@@ -105,7 +105,8 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
   details.
 - Manually add BSD-3-Clause license (recommended) first to your
   repository and then to the `DESCRIPTION` file.
-- 
+- Run `devtools::check()` to verify if everything works (As of now, it
+  raises a note “Licence stub is invalid DCF.”)
 
 ## Create website for your package
 

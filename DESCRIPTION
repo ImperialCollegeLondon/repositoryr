@@ -8,7 +8,7 @@ Author: person(given = "Imperial College London RSE Team",
            email = "ict-rse-team@imperial.ac.uk")
 Maintainer: Imperial College London RSE Team <ict-rse-team@imperial.ac.uk>
 Description: Provides a step by step guide to creating a R package repository.
-License: BSD-3-Clause
+License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://imperialcollegelondon.github.io/repositoryr/
