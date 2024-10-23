@@ -97,6 +97,16 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 - It should raise an issue about missing/non-standard license in the
   `DESCRIPTION` file. It will be fixed soon!
 
+## Update `DESCRIPTION` file
+
+- The `DESCRIPTION` file contains the metadata of your package. You can
+  add some descriptive text about your package under `Title` and
+  `Description` fields. You can also fill in the author and maintainer
+  details.
+- Manually add BSD-3-Clause license (recommended) first to your
+  repository and then to the `DESCRIPTION` file.
+- 
+
 ## Create website for your package
 
 - Run `install.packages("pkgdown")`.
