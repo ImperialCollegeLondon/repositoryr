@@ -21,6 +21,17 @@ R package repository.
     `choco install r.studio`) OR
   - Install it via Homebrew.
 
+- Toolchain for building R packages: If you are using RStudio, the IDE
+  will alert you and provide support once you try to do something that
+  requires you to setup your development environment. For example:
+
+  - On Windows, you will need to install
+    [Rtools](https://r-pkgs.org/setup.html#windows).
+  - On macOS, you will need to install
+    [Xcode](https://r-pkgs.org/setup.html#macos).
+  - On Linux, you will need to install the R development package, called
+    [`r-base-dev`](https://r-pkgs.org/setup.html#linux).
+
 ## Selecting a package name
 
 Install the package `available` in RStudio using
