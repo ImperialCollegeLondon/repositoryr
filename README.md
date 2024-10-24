@@ -195,6 +195,8 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 - Add another action to lint your package using
   `usethis::use_github_action("lint")`.
 - Add a `R CMD-check` badge using `usethis::use_github_actions_badge()`.
+- To add a package to the `DESCRIPTION` file, use
+  `usethis::use_package("pkgname")`.
 - Customise the package website by editing the `_pkgdown.yml` file. For
   example, you can add a lightswitch and GitHub repository button to the
   navbar:
