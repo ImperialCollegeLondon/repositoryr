@@ -8,6 +8,6 @@
 #'
 #' @examples add(5, 4)
 add <- function(x, y) {
-  z = x + y
+  z <- x + y
   return(z)
 }
