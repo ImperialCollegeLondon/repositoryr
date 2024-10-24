@@ -124,6 +124,17 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 - Run `devtools::check()` to verify if everything works (As of now, it
   raises a note “Licence stub is invalid DCF.”)
 
+## Build a README
+
+- Use `usethis::use_readme_rmd()` to initialize a basic, executable
+  `README.Rmd` file.
+- In the `README.Rmd` you can add the purpose of the package, provide
+  installation instructions, and show an example of how the package can
+  be used.
+- Remember to render the `README.Rmd` file (each time that you make a
+  change to it) to make the `README.md` file. You can do this by running
+  `devtools::build_readme()`.
+
 ## Add R files and corresponding unit tests
 
 - Create a R function file using `usethis::use_r("filename")`.
@@ -148,16 +159,6 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
   `roxygen2`. To do so, run `devtools::document()` this will also create
   the corresponding `filename.Rd` file in `man/filename.Rd` using
   `roxygen2`.
-
-## Build a README
-
-- Use `usethis::use_readme_rmd()` to initialize a basic, executable
-  `README.Rmd` file.
-- In the `README.Rmd` you can add the purpose of the package, provide
-  installation instructions, and show an example of how the package can
-  be used.
-- Remember to render the `README.Rmd` file to make the `README.md` file.
-  You can do this by running `devtools::build_readme()`.
 
 ## Create website for your package
 
