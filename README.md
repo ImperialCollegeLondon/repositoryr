@@ -4,6 +4,8 @@
 # repositoryr
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/ImperialCollegeLondon/repositoryr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ImperialCollegeLondon/repositoryr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of repositoryr is to provide a step by step guide to creating a
@@ -172,6 +174,31 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 - Your `README.md` becomes the homepage, documentation in `man/`
   generates a function reference, and vignettes will be rendered into
   `articles/`.
+
+## Bonus!
+
+- Add a GitHub action workflow to render Rmarkdown using
+  `usethis::use_github_action("render-rmarkdown")`.
+- Add another action to lint your package using
+  `usethis::use_github_action("lint")`.
+- Add a `R CMD-check` badge using `usethis::use_github_actions_badge()`.
+- Customise the package website by editing the `_pkgdown.yml` file. For
+  example, you can add a lightswitch and GitHub repository button to the
+  navbar:
+
+``` yaml
+template:
+  bootstrap: 5
+  light-switch: true
+navbar:
+  structure:
+    right: [search, github, lightswitch]
+  components:
+    github:
+      icon: fa-github
+      href: https://github.com/<owner-name>/<repo-name>
+      aria-label: GitHub
+```
 
 ## Installation
 
