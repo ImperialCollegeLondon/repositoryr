@@ -167,12 +167,23 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 ## Create website for your package
 
 - Run `install.packages("pkgdown")`.
+
 - To configure the package to use and deploy pkgdown, run
   `usethis::use_pkgdown_github_pages()`.
-- To preview your site locally before publishing, run
-  `pkgdown::build_site()`.
+
 - This will add the necessary components and sets up GitHub Actions for
   automatic site building when deploying.
+
+- To preview your site locally before publishing, run
+  `pkgdown::build_site()`. If you see a warning that the “package is in
+  use and will not be installed”, then:
+
+  - Run `search()` to see if the package is loaded.
+  - If it is, run `detach("package:pkgname", unload = TRUE)` to unload
+    it.
+  - Run `search()` again to verify that the package is no longer loaded.
+  - Then run `pkgdown::build_site()` again to preview the site locally.
+
 - Your `README.md` becomes the homepage, documentation in `man/`
   generates a function reference, and vignettes will be rendered into
   `articles/`.
