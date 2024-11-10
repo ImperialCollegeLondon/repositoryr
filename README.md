@@ -194,6 +194,8 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
   `usethis::use_github_action("render-rmarkdown")`.
 - Add another action to lint your package using
   `usethis::use_github_action("lint")`.
+- To add workflow for `R CMD check`, use `usethis::use_github_action()`
+  and then select 1 (first option).
 - Add a `R CMD-check` badge using `usethis::use_github_actions_badge()`.
 - To add a package to the `DESCRIPTION` file, use
   `usethis::use_package("pkgname")`.
