@@ -57,7 +57,7 @@
 <div class="page-header"><h1 id="repositoryr">repositoryr<a class="anchor" aria-label="anchor" href="#repositoryr"></a>
 </h1></div>
 <!-- badges: start -->
-<!-- badges: end -->
+
 <p>The goal of repositoryr is to provide a step by step guide to creating a R package repository.</p>
 <div class="section level2">
 <h2 id="requirements">Requirements<a class="anchor" aria-label="anchor" href="#requirements"></a>
@@ -72,6 +72,16 @@
 <li>Install it via Homebrew.</li>
 </ul>
 </li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="toolchain-for-building-r-packages">Toolchain for building R packages<a class="anchor" aria-label="anchor" href="#toolchain-for-building-r-packages"></a>
+</h2>
+<p>If you are using RStudio, don’t worry about setting this up for now. The IDE will alert you and provide support once you try to do something that requires you to setup your development environment. For example:</p>
+<ul>
+<li>On Windows, you will need to install <a href="https://r-pkgs.org/setup.html#windows" class="external-link">Rtools</a>.</li>
+<li>On macOS, you will need to install <a href="https://r-pkgs.org/setup.html#macos" class="external-link">Xcode</a>.</li>
+<li>On Linux, you will need to install the R development package, called <a href="https://r-pkgs.org/setup.html#linux" class="external-link"><code>r-base-dev</code></a>.</li>
 </ul>
 </div>
 <div class="section level2">
@@ -141,7 +151,7 @@ Using pak package
 </h2>
 <ul>
 <li>At this stage, you can try <code>devtools::check()</code> to see if there are any issues with the package.</li>
-<li>It should raise an issue about missing/non-standard license in the <code>DESCRIPTION</code> file. It will be fixed soon!</li>
+<li>If any of the toolchain required to build an R package is missing in your system, then RStudio will alert you at this stage. Please refer <a href="#Toolchain-for-building-R-packages">Toolchain for building R packages</a> and once done run <code>devtools::check()</code> again. It should raise an issue about missing/non-standard license in the <code>DESCRIPTION</code> file (This issue will be fixed soon!).</li>
 </ul>
 </div>
 <div class="section level2">
@@ -151,6 +161,15 @@ Using pak package
 <li>The <code>DESCRIPTION</code> file contains the metadata of your package. You can add some descriptive text about your package under <code>Title</code> and <code>Description</code> fields. You can also fill in the author and maintainer details.</li>
 <li>Manually add BSD-3-Clause license (recommended) first to your repository and then to the <code>DESCRIPTION</code> file.</li>
 <li>Run <code>devtools::check()</code> to verify if everything works (As of now, it raises a note “Licence stub is invalid DCF.”)</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="build-a-readme">Build a README<a class="anchor" aria-label="anchor" href="#build-a-readme"></a>
+</h2>
+<ul>
+<li>Use <code>usethis::use_readme_rmd()</code> to initialize a basic, executable <code>README.Rmd</code> file.</li>
+<li>In the <code>README.Rmd</code> you can add the purpose of the package, provide installation instructions, and show an example of how the package can be used.</li>
+<li>Remember to render the <code>README.Rmd</code> file (each time that you make a change to it) to make the <code>README.md</code> file. You can do this by running <code>devtools::build_readme()</code>.</li>
 </ul>
 </div>
 <div class="section level2">
@@ -175,30 +194,51 @@ Using pak package
 </ul>
 </div>
 <div class="section level2">
-<h2 id="build-a-readme">Build a README<a class="anchor" aria-label="anchor" href="#build-a-readme"></a>
-</h2>
-<ul>
-<li>Use <code>usethis::use_readme_rmd()</code> to initialize a basic, executable <code>README.Rmd</code> file.</li>
-<li>In the <code>README.Rmd</code> you can add the purpose of the package, provide installation instructions, and show an example of how the package can be used.</li>
-<li>Remember to render the <code>README.Rmd</code> file to make the <code>README.md</code> file. You can do this by running <code>devtools::build_readme()</code>.</li>
-</ul>
-</div>
-<div class="section level2">
 <h2 id="create-website-for-your-package">Create website for your package<a class="anchor" aria-label="anchor" href="#create-website-for-your-package"></a>
 </h2>
 <ul>
-<li>Run <code>install.packages("pkgdown")</code>.</li>
-<li>To configure the package to use and deploy pkgdown, run <code>usethis::use_pkgdown_github_pages()</code>.</li>
-<li>To preview your site locally before publishing, run <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code>.</li>
-<li>This will add the necessary components and sets up GitHub Actions for automatic site building when deploying.</li>
-<li>Your <code>README.md</code> becomes the homepage, documentation in <code>man/</code> generates a function reference, and vignettes will be rendered into <code>articles/</code>.</li>
+<li><p>Run <code>install.packages("pkgdown")</code>.</p></li>
+<li><p>To configure the package to use and deploy pkgdown, run <code>usethis::use_pkgdown_github_pages()</code>.</p></li>
+<li><p>This will add the necessary components and sets up GitHub Actions for automatic site building when deploying.</p></li>
+<li>
+<p>To preview your site locally before publishing, run <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code>. If you see a warning that the “package is in use and will not be installed”, then:</p>
+<ul>
+<li>Run <code><a href="https://rdrr.io/r/base/search.html" class="external-link">search()</a></code> to see if the package is loaded.</li>
+<li>If it is, run <code>detach("package:pkgname", unload = TRUE)</code> to unload it.</li>
+<li>Run <code><a href="https://rdrr.io/r/base/search.html" class="external-link">search()</a></code> again to verify that the package is no longer loaded.</li>
+<li>Then run <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> again to preview the site locally.</li>
 </ul>
+</li>
+<li><p>Your <code>README.md</code> becomes the homepage, documentation in <code>man/</code> generates a function reference, and vignettes will be rendered into <code>articles/</code>.</p></li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="bonus">Bonus!<a class="anchor" aria-label="anchor" href="#bonus"></a>
+</h2>
+<ul>
+<li>Add a GitHub action workflow to render Rmarkdown using <code>usethis::use_github_action("render-rmarkdown")</code>.</li>
+<li>Add another action to lint your package using <code>usethis::use_github_action("lint")</code>.</li>
+<li>Add a <code>R CMD-check</code> badge using <code>usethis::use_github_actions_badge()</code>.</li>
+<li>To add a package to the <code>DESCRIPTION</code> file, use <code>usethis::use_package("pkgname")</code>.</li>
+<li>Customise the package website by editing the <code>_pkgdown.yml</code> file. For example, you can add a lightswitch and GitHub repository button to the navbar:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">template</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="at">  </span><span class="fu">bootstrap</span><span class="kw">:</span><span class="at"> </span><span class="dv">5</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="at">  </span><span class="fu">light-switch</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="at">  </span><span class="fu">structure</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">search</span><span class="kw">,</span><span class="at"> github</span><span class="kw">,</span><span class="at"> lightswitch</span><span class="kw">]</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="at">  </span><span class="fu">components</span><span class="kw">:</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="at">    </span><span class="fu">github</span><span class="kw">:</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="at">      </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> fa-github</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/&lt;owner-name&gt;/&lt;repo-name&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="at">      </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> GitHub</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the development version of repositoryr from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"ImperialCollegeLondon/repositoryr"</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -227,7 +267,12 @@ Using pak package
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/ImperialCollegeLondon/repositoryr/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/ImperialCollegeLondon/repositoryr/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>
