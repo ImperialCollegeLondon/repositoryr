@@ -146,7 +146,8 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 
 - Create a R function file using `usethis::use_r("filename")`.
 - A `filename.R` file will be created under the `R/` directory which you
-  can populate.
+  can populate (In this case, as an example, it is populated with a
+  function to add two numbers).
 - Create a corresponding unit test file using
   `usethis::use_test("filename")`.
 - A `test-filename.R` file will be created under the `tests/testthat/`
