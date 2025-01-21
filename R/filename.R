@@ -1,4 +1,4 @@
-#' Function to modify a file name
+#' Function to modify a file path
 #'
 #' @param path A character string
 #'

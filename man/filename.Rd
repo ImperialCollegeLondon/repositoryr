@@ -2,7 +2,7 @@
 % Please edit documentation in R/filename.R
 \name{filename}
 \alias{filename}
-\title{Function to modify a file name}
+\title{Function to modify a file path}
 \usage{
 filename(path)
 }
@@ -13,5 +13,5 @@ filename(path)
 A character string
 }
 \description{
-Function to modify a file name
+Function to modify a file path
 }
