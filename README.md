@@ -123,8 +123,11 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
   add some descriptive text about your package under `Title` and
   `Description` fields. You can also fill in the author and maintainer
   details.
-- Manually add BSD-3-Clause license (recommended) first to your
-  repository and then to the `DESCRIPTION` file.
+- Create a LICENSE file in your repository using the [template for the
+  BSD 3-clause license](https://www.r-project.org/Licenses/BSD_3_clause)
+  (recommended).
+- Then edit the `License` tag in the `DESCRIPTION` file to include
+  `BSD_3_clause + file LICENSE`.
 - Run `devtools::check()` to verify if everything works (As of now, it
   raises a note “Licence stub is invalid DCF.”)
 
@@ -143,7 +146,8 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 
 - Create a R function file using `usethis::use_r("filename")`.
 - A `filename.R` file will be created under the `R/` directory which you
-  can populate.
+  can populate (In this case, as an example, it is populated with a
+  function to modify a file path).
 - Create a corresponding unit test file using
   `usethis::use_test("filename")`.
 - A `test-filename.R` file will be created under the `tests/testthat/`
@@ -151,7 +155,8 @@ repo](https://happygitwithr.com/existing-github-last.html#create-and-connect-a-g
 
 ## Setup documentation
 
-- Use `devtools::document` to set up the documentation for your package.
+- Use `devtools::document()` to set up the documentation for your
+  package.
 - Delete the template `R/hello.R` file.
 - Now open any other R file (that you created) where you want add the
   documentation (here it is, the `R/add.R` file).
